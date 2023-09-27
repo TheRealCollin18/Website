@@ -3,7 +3,7 @@
   <script>
 
       function changeColor(color) {
-          document.body.style.background = "red";
+          document.body.style.background = color;
       }
        
 
@@ -21,7 +21,7 @@
       <h2>
         Don't like the backround color?
       </h2>
-      <button id = "b1" onlclick = "gfg_Run()">
+      <button id = "b1" onlclick = "changeColor(red)">
         CLICK
       </button>
   </body>
