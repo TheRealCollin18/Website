@@ -1,32 +1,35 @@
 <!DOCTYPE/html>
 <html>
   <script>
-    function buttonevent(){
-      var x = Math.floor(Math. random() * 256);
-      var y = Math.floor(Math. random() * 256);
-      var z = Math.floor(Math. random() * 256);
-      var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-      console.log(bgColor);
-      document.body.style.background = bgColor;
-    }
+      let el_up = document.getElementById("GFG_UP");
+      let el_down = document.getElementById("GFG_DOWN");
+      let str = "Click on button to change the background color";
+               
+      el_up.innerHTML = str;
+               
+      function changeColor(color) {
+          document.body.style.background = color;
+      }
+       
+      function gfg_Run() {
+          changeColor('yellow');
+          el_down.innerHTML = "Background Color changed";
+      }       
   </script>
   <style>
     .body {
       backround-color: coral
       
     }
-    .button{
-      border: none;
-      color: red;
-      display: inline-block;
-      cursor: pointer;
-    }
   </style>
   <h1>
     Hello there
   </h1>
   <body>
-      <button2 id = "b1" onlclick = "buttonevent">
+      <h2>
+        Don't like the backround color?
+      </h2>
+      <button2 id = "b1" onlclick = "gfg_Run()">
         CLICK
       </button2>
   </body>
