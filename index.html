@@ -2,12 +2,12 @@
 <html>
   <body style = "background-color: coral">
     <script>
-  
+        const colorarray = ["blue", "green", "red", "white", "coral", "fuchsia", "navy", "lime", "teal", "silver"]
         function changeColor() {
-            document.body.style.backgroundColor = "red";
+            document.body.style.backgroundColor = colorarray[Math.random()*11];
         }
         function chnageColorTitle() {
-            document.head.style.backgroundColor = "green";
+            document.head.style.backgroundColor = colorarray[Math.random()*11];
         }
   
     </script>
