@@ -1,23 +1,30 @@
 <!DOCTYPE html>
+/*for https://www.rainforest-alliance.org/species/capybara/ https://www.savetheelephants.org *\
 <html>
-  <body style = "background-color: coral">
-    <script>
-        const colorarray = ["blue", "green", "red", "white", "coral", "fuchsia", "navy", "lime", "teal", "silver"]
-        let helpme = 0;
-        function changeColor() {
-            document.body.style.backgroundColor = colorarray[helpme];
-            helpme += 1;
-            cosole.log(helpme);
-        }
-      
-        function chnageColorTitle() {
-            document.head.style.backgroundColor = colorarray[helpme];
-            let helpme = helpme + 0;
-            cosole.log(helpme);
-        }
+  <script>
+      const colorarray = ["blue", "green", "red", "white", "coral", "fuchsia", "navy", "lime", "teal", "silver", "olive", "aqua", "maroon", "purple", "darkolivegreen", "indigo", "mediumorchid", "goldenrod", "seagreen", "sandybrown", "tomato", "turquoise"]
+      let helpme = 0;
+      let helpme2 = 0;
+      function changeColor() {
+          document.body.style.backgroundColor = colorarray[helpme];
+          helpme += 1;
+          if(helpme == colorarray.length){
+            helpme = 0;
+          }
+            
+      }
+    
+      function changeColorTitle() {
+          let header = document.getElementsByClassName("hello");
+          header[0].style.color = colorarray[helpme2];
+          helpme2 += 1;
+          if(helpme2 == colorarray.length){
+            helpme2 = 0;
+          }
+      }
   
-    </script>
-    <style>
+  </script>
+  <style>
       .button {
           background-color: "green"; /* Green */
           border: none;
@@ -28,23 +35,29 @@
           display: inline-block;
           font-size: 16px;
         }
-    </style>
-    <head>
-      <h1>
-        Hello there
-      </h1>
-    </head>
+  </style>
+  <body>
     
-        <h2>
-          Don't like the background color?
-        </h2>
-        <button id = "b1" onclick = "changeColor()">
-          CLICK HERE
-        </button>
-        <h2> Don't like the title's color? </h2>
-        <button id = "b2" onclick = "changeColorTitle()">
-          CLICK HERE
-        </button>
-    </body>
+
+    
+      <h1 class = "hello">
+        How you can help the animals
+      </h1>
+    
+    
+      <h2>
+        Don't like the background color?
+      </h2>
+      <button id = "b1" onclick = "changeColor()">
+        CLICK HERE
+      </button>
+      <h2> Don't like the title's color? </h2>
+      <button id = "b2" onclick = "changeColorTitle()">
+        CLICK HERE
+      </button>
+      <p>This amount of control cannot be said at all about animals being constantly poached and negatively affected by human affairs. Here are some sites where you can help them</p>
+      <img src = "./capybara1.jpg" alt = "">
+      <img src = "./elephant1.jpg" alt = "">
+  </body>
 
 </html>
